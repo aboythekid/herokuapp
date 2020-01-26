@@ -279,6 +279,7 @@ def update():
         print(date_time_obj)
         mydate = date_time_obj
         mytemp = float(testArray[GSheetRow.Temperature.value])
+        #myrtdtemp = float(testArray[GSheetRow.RTD_Temperature.value])
         print(type(testArray[GSheetRow.Timestamp.value]))
         print("testArray[GSheetRow.Temperature.value]")
         print(testArray[GSheetRow.Temperature.value])
@@ -304,31 +305,6 @@ def update():
 
     #newmydata = [['18/01/2020 12:20:01', '22.58', '78.24', '12.41', '1104', '590', '802', '876', '869', '1.580281', '1.164177', '1.672761', '0.979311', '2.077344', '36215504']]
 
-    #print("here print_message type(gsheetRows)"); 
-    #print(type(gsheetRows))
-    #print("here print_message type(testData)"); 
-    #print(type(testData))
-    #print("here print_message type(testDataFrame)"); 
-    #print(type(testDataFrame))
-    #print("here print_message type(pd)"); 
-    #print(type(pd))
-    #print("here print_message type(streamsource)"); 
-    #print(type(streamsource))
-    #if (len(testData) > 0):
-    #print("here update len(testData) is TRUE ")
-    #print(testData)
-    #newDataFrame = pd.DataFrame(
-    #    newmydata,
-    #    columns=['Timestamp', 'Temperature', 'Humidity', 'RTD_Temperature', 'CO2', 'Weight1', 'Weight2', 'Weight3', 'Weight4', 'Load_Cell1', 'Load_Cell2', 'Load_Cell3', 'Load_Cell4', 'VUSB', 'Weight_Code'])
-    #newDataFrame = pd.DataFrame(
-    #    testData,
-    #    columns=['Timestamp', 'Temperature', 'Humidity', 'RTD_Temperature', 'CO2', 'Weight1', 'Weight2', 'Weight3', 'Weight4', 'Load_Cell1', 'Load_Cell2', 'Load_Cell3', 'Load_Cell4', 'VUSB', 'Weight_Code'])
-    #print("here update 7");
-    #print(newDataFrame)
-    #print("here update 8");
-    #streamsource.stream(newDataFrame, 100)
-    #print("here update 9");
-    #testData = []
     print("here update 10");
 
 
@@ -573,11 +549,11 @@ temperature_fig = plot_temperature()
 
 
 #l1 = layout([[temperature_fig, load_cell_voltages_fig]], sizing_mode='stretch_both')
-#l1 = layout([[temperature_fig, humidity_fig], [temp_and_hum_fig, CO2_fig]], sizing_mode='fixed')
-#l2 = layout([[load_cell_voltages_fig, weight_fig], [load_cell_voltages_ac_fig, voltages_temperature_means_fig]], sizing_mode='fixed')
+l1 = layout([[temperature_fig, humidity_fig], [temp_and_hum_fig, CO2_fig]], sizing_mode='fixed')
+l2 = layout([[load_cell_voltages_fig, weight_fig], [load_cell_voltages_ac_fig, voltages_temperature_means_fig]], sizing_mode='fixed')
 
-l1 = layout([[temperature_fig]], sizing_mode='fixed')
-l2 = layout([[newfig]], sizing_mode='fixed')
+#l1 = layout([[temperature_fig]], sizing_mode='fixed')
+#l2 = layout([[newfig]], sizing_mode='fixed')
 l3 = layout([[temperature_fig_test]], sizing_mode='fixed')
 
 #l4 = layout([[fig]], sizing_mode='fixed')
@@ -586,8 +562,8 @@ l3 = layout([[temperature_fig_test]], sizing_mode='fixed')
 #l2 = gridplot([[load_cell_voltages_fig, weight_fig], [load_cell_voltages_ac_fig, voltages_temperature_means_fig]], sizing_mode='stretch_both')
 
 tab1 = Panel(child=l1,title="Air Quality")
-tab2 = Panel(child=l2,title="Streaming Example")
-tab3 = Panel(child=l3,title="Streaming Dynamic")
+tab2 = Panel(child=l2,title="Metrics")
+tab3 = Panel(child=l3,title="Streaming")
 # Make a tab with the layout
 #tab3 = Panel(child=l3, title='Delay Histogram')
 #tab4 = Panel(child=l4, title='Streaming')
