@@ -72,7 +72,7 @@ print(listLen)
 df = pd.DataFrame(gsheetRows, columns=headers)
 
 sio = socketio.Client()
-sio.connect('https://modified-sheets-stream.herokuapp.com/')
+sio.connect('https://data-listen.herokuapp.com/')
 
 testData = []
     
