@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@aboythekid 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-aboythekid
-/
-herokuapp
-forked from mcronin79/herokuapp
-0
-01
- Code Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
-herokuapp/myapp/main.py
-@aboythekid aboythekid Update main.py
-88ec0d4 8 hours ago
-@mcronin79@samirak93@aboythekid
-598 lines (493 sloc)  23.2 KB
-  
-Code navigation is available!
-Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository. Learn more
-
- Code navigation is available for this repository but data for this commit does not exist.
-
-Learn more or give us feedback
 from bokeh.io import curdoc
 from bokeh.palettes import Spectral6
 from bokeh.plotting import figure
@@ -281,8 +249,6 @@ temperature_fig_test.plot_height = 600
 temperature_fig_test.plot_width = 800
 temperature_fig_test.xaxis.axis_label = 'Time'
 temperature_fig_test.yaxis.axis_label = 'Temperature (°C)'
-
-
 #date_time_str = 'Jun 28 2018  7:40AM'
 #date_time_obj = datetime.datetime.strptime(date_time_str, '%d/%m/%Y %H:%M:%S')
 #N=1
@@ -628,16 +594,3 @@ tabs = Tabs(tabs=[ tab1, tab2, tab3 ])
 curdoc().add_periodic_callback(update, 30000)
 curdoc().title = "Hello, world!"
 curdoc().add_root(tabs)
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Found 2 out of 2 items
